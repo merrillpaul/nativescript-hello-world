@@ -1,1 +1,5 @@
-@import "nativescript-theme-core/css/core.light.css";
+/* @import "nativescript-theme-core/css/core.light.css"; */
+@import "nativescript-theme-core/css/sky.css";
+.action-bar {
+  background-color: orangered;
+}
