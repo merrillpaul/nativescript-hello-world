@@ -1,12 +1,16 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "my-app",
   template: `
-    <ActionBar title="My App"></ActionBar>
+    <ActionBar [title]="message"></ActionBar>
     <!-- Your UI components go here -->
   `
 })
-export class AppComponent {
-  // Your TypeScript logic goes here
+export class AppComponent implements OnInit {
+  message: string = 'Tester App'
+
+  public ngOnInit(): void {
+    setInterval(() => this.message = `Tester App ${Date.now()}`, 4000);
+  }
 }
